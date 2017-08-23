@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<body>
+    <div class="parent">
+        <div class="shadow"></div>
+        <div class="cardWrap">Text goes here you neeerddss</div>
+    </div>
+
+
+    <style>
+        div.parent {
+            background-color: aqua;
+            border: 3px solid black;
+            margin: 20px;
+            position: relative;
+            width: 30%;
+        }
+        
+        div.shadow {
+            /*pattern*/
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAMklEQVQoU2NkwA/+M+KR/8/AwMCISwFYEqQZmwK4JDYFKJLoCjAkkRVglYQpwCkJUgAAGOQICDcTvB4AAAAASUVORK5CYII=
+) repeat;
+            /*border*/
+            border-color: black;
+            border-style: solid;
+            border-width: inherit;
+            height: 100%;
+            /*positioned absolute so that text isn't moved and it can be placed relative to the parent*/
+            position: absolute;
+            /*offset*/
+            right: 4px;
+            top: 4px;
+            width: 100%;
+            /*behind parent*/
+            z-index: -1;
+        }
+        
+        div.cardWrap {
+            margin: 5px;
+        }
+
+    </style>
+</body>
+
+
+<!-- Translate above to Sass -->
